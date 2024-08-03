@@ -85,3 +85,33 @@ export const deleteProduct = async (id) => {
     throw error;
   }
 };
+import axios from 'axios';
+
+const API_BASE_URL = 'http://yourapi.com/api';
+
+export const placeOrder = async (orderData) => {
+  try {
+    const response = await axios.post(`${API_BASE_URL}/orders`, orderData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getOrderDetails = async (id) => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/orders/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const trackOrder = async (id) => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/orders/${id}/status`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
