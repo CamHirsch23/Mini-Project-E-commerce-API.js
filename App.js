@@ -38,3 +38,22 @@ const App = () => {
 };
 
 export default App;
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import PlaceOrderForm from './components/PlaceOrderForm';
+import OrderDetails from './components/OrderDetails';
+import TrackOrderStatus from './components/TrackOrderStatus';
+
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/place-order" component={PlaceOrderForm} />
+        <Route path="/order/:id" component={OrderDetails} />
+        <Route path="/track-order/:id" component={TrackOrderStatus} />
+      </Switch>
+    </Router>
+  );
+};
+
+export default App;
