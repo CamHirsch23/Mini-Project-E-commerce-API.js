@@ -2,116 +2,65 @@ import axios from 'axios';
 
 const API_BASE_URL = 'http://yourapi.com/api';
 
+// Customer API Endpoints
 export const createCustomer = async (customerData) => {
-  try {
-    const response = await axios.post(`${API_BASE_URL}/customers`, customerData);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.post(`${API_BASE_URL}/customers`, customerData);
+  return response.data;
 };
 
 export const getCustomer = async (id) => {
-  try {
-    const response = await axios.get(`${API_BASE_URL}/customers/${id}`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.get(`${API_BASE_URL}/customers/${id}`);
+  return response.data;
 };
 
 export const updateCustomer = async (id, customerData) => {
-  try {
-    const response = await axios.put(`${API_BASE_URL}/customers/${id}`, customerData);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.put(`${API_BASE_URL}/customers/${id}`, customerData);
+  return response.data;
 };
 
 export const deleteCustomer = async (id) => {
-  try {
-    const response = await axios.delete(`${API_BASE_URL}/customers/${id}`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.delete(`${API_BASE_URL}/customers/${id}`);
+  return response.data;
 };
-import axios from 'axios';
 
-const API_BASE_URL = 'http://yourapi.com/api';
-
+// Product API Endpoints
 export const createProduct = async (productData) => {
-  try {
-    const response = await axios.post(`${API_BASE_URL}/products`, productData);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.post(`${API_BASE_URL}/products`, productData);
+  return response.data;
 };
 
 export const getProducts = async () => {
-  try {
-    const response = await axios.get(`${API_BASE_URL}/products`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.get(`${API_BASE_URL}/products`);
+  return response.data;
 };
 
 export const getProduct = async (id) => {
-  try {
-    const response = await axios.get(`${API_BASE_URL}/products/${id}`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.get(`${API_BASE_URL}/products/${id}`);
+  return response.data;
 };
 
 export const updateProduct = async (id, productData) => {
-  try {
-    const response = await axios.put(`${API_BASE_URL}/products/${id}`, productData);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.put(`${API_BASE_URL}/products/${id}`, productData);
+  return response.data;
 };
 
 export const deleteProduct = async (id) => {
-  try {
-    const response = await axios.delete(`${API_BASE_URL}/products/${id}`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.delete(`${API_BASE_URL}/products/${id}`);
+  return response.data;
 };
-import axios from 'axios';
 
-const API_BASE_URL = 'http://yourapi.com/api';
-
+// Order API Endpoints
 export const placeOrder = async (orderData) => {
-  try {
-    const response = await axios.post(`${API_BASE_URL}/orders`, orderData);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.post(`${API_BASE_URL}/orders`, orderData);
+  return response.data;
 };
 
 export const getOrderDetails = async (id) => {
-  try {
-    const response = await axios.get(`${API_BASE_URL}/orders/${id}`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.get(`${API_BASE_URL}/orders/${id}`);
+  return response.data;
 };
 
 export const trackOrder = async (id) => {
-  try {
-    const response = await axios.get(`${API_BASE_URL}/orders/${id}/status`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = await axios.get(`${API_BASE_URL}/orders/${id}/status`);
+  return response.data;
 };
